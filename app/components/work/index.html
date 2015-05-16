@@ -1,0 +1,41 @@
+<header id="home" class="secondary-header">
+  <div class="bg-wrapper"></div>
+  <div class="row">
+    <h1><strong>Travaux</strong><span class="hide-for-large-up clearfix"></span>r&eacute;alis&eacute;s</h1>
+  </div>
+</header>
+
+<section id="works">
+  <div class="row contact-form">
+    <div class="columns medium-8 medium-offset-2">
+      <form>
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span class="prefix"><i class="fa fa-search fa-fw"></i></span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input data-ng-model="searchQuery" type="text" placeholder="Chercher...">
+          </div>
+        </div>
+        <!-- <div class="row collapse"> -->
+        <!--   <div class="small-3 large-2 columns"> -->
+        <!--     <span class="prefix"><i class="fa fa-sort fa-fw"></i></span> -->
+        <!--   </div> -->
+        <!--   <div class="small-9 large-10 columns"> -->
+        <!--     <select data-ng-model="orderQuery"> -->
+        <!--       <option disabled selected class="default" value="">Trier par...</option> -->
+        <!--       <option value="title">Titre</option> -->
+        <!--       <option value="summary">Description</option> -->
+        <!--       <option value="featured">En vedette</option> -->
+        <!--     </select> -->
+        <!--   </div> -->
+        <!-- </div> -->
+      </form>
+    </div>
+  </div>
+  <div data-ng-show="work.loading" data-show-error="work.error" data-embed-loader></div>
+  <div data-ng-hide="work.loading">
+    <div data-work-element data-ng-repeat="work in works | filter: {summary: searchQuery} | orderBy: orderQuery | limitTo: 20">
+    </div>
+  </div>
+</section>

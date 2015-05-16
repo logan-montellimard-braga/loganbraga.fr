@@ -1,0 +1,9 @@
+/* SITE */
+    Language: Français
+    Doctype: HTML5
+    Technologies: HTML5 / CSS3 / Angularjs / Javascript / jQuery / Foundation
+
+/* AUTHOR */
+    Name: Logan Braga
+    Contact: <braga dot logan at gmail dot com>
+    From: France

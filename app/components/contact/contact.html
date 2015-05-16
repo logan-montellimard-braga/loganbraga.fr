@@ -1,0 +1,56 @@
+<header id="home" class="secondary-header">
+  <div class="bg-wrapper"></div>
+  <div class="row">
+    <h1>Me<span class="hide-for-large-up clearfix"></span><strong>Contacter</strong></h1>
+  </div>
+</header>
+
+<section id="contact" class="page">
+  <div data-ui-gmap-google-map class="columns large-12" id="map" data-center='map.center' data-zoom='12' data-options='map.options_strict'>
+    <div data-ui-gmap-marker data-idKey='1' data-coords='map.marker.cords' data-icon='map.marker.icon' data-options='map.marker.options'></div>
+  </div>
+  <div class="full-width-row full-title">
+    <h3>envoyer un <span class="hide-for-large-up clearfix"></span><strong>message</strong></h3>
+  </div>
+  <div class="row contact-form">
+    <div class="columns large-10 large-offset-1">
+      <p class="alert success" data-ng-show="okay">Message envoy&eacute; avec succ&egrave;s !</p>
+      <p class="alert error" data-ng-show="error">Erreur lors de l'envoi du message, merci de remplir tous les champs.</p>
+      <form data-ng-class="{'send': okay}" data-ng-submit="sendMessage()">
+        <fieldset data-ng-disabled="isSending">
+          <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix"><i class="fa fa-user fa-fw"></i>&nbsp;Nom</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input data-ng-model="formData.author" required name="author" maxlength="255" type="text" placeholder="Votre nom ou e-mail...">
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix"><i class="fa fa-tag fa-fw"></i>&nbsp;Sujet</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input data-ng-model="formData.title" required name="title" maxlength="255" type="text" placeholder="Sujet du message...">
+            </div>
+          </div>
+          <div class="row collapse">
+            <div class="large-12 columns">
+              <label><i class="fa fa-comments fa-fw"></i>&nbsp;Corps du message</label>
+              <textarea data-ng-model="formData.content" required name="content" maxlength="3000" rows="8" placeholder="Votre message..."></textarea>
+            </div>
+          </div>
+          <div class="row text-right">
+            <div class="large-12 columns">
+              <button data-ng-disabled="isSending" id="send_mess" type="submit" class="button large transition">
+                <i class="fa fa-paper-plane"></i>
+                &nbsp;
+                Envoyer
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>

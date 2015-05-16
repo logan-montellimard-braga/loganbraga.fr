@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="fr" data-ng-app="loganbraga" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="fr" data-ng-app="loganbraga" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="fr" data-ng-app="loganbraga" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" data-ng-app="loganbraga" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="logan braga folio portfolio dev web puy-en-velay">
+  <meta name="description" content="Portfolio en ligne de Logan Braga, développeur logiciel, développeur web, étudiant au Puy-en-Velay.">
+  <meta name="author" content="Logan Braga">
+  <link rel="author" href="https://plus.google.com/+LoganBragaFrance/" />
+  <link rel="publisher" href="https://plus.google.com/+LoganBragaFrance" />
+
+  <title data-ng-bind="title + ' Logan Braga &middot; D&eacute;veloppeur web et logiciel au Puy-en-Velay'">Logan Braga &middot; D&eacute;veloppeur web et logiciel au Puy-en-Velay</title>
+
+  <!-- Multiple favicons support -->
+  <link rel="icon" type="image/x-icon"         href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon-precomposed"     href="assets/icons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" sizes="57x57"   href="assets/icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72"   href="assets/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60"   href="assets/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76"   href="assets/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png"            href="assets/icons/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png"            href="assets/icons/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png"            href="assets/icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png"            href="assets/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png"            href="assets/icons/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileImage"         content="assets/icons/mstile-144x144.png">
+  <meta name="msapplication-TileColor"         content="#cb302e">
+
+  <!-- Styles -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700,600,400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- PRODUCTION STYLES -->
+  <!-- <link rel="stylesheet" href="assets/css/prod_app.min.css"> -->
+  <!-- END PRODUCTION STYLES -->
+
+  <link rel="stylesheet" href="assets/css/vendor/loaders.custom.min.css">
+  <link rel="stylesheet" href="bower_components/foundation/css/normalize.min.css">
+  <link rel="stylesheet" href="assets/css/vendor/foundation.custom.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <script src="assets/js/vendor/modernizr.custom.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="assets/js/vendor/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body data-ng-controller="BaseCtrl" data-ng-cloak class="pushmenu-push">
+  <!-- Google analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-60715874-2', 'auto');ga('send', 'pageview');
+  </script>
+
+  <!-- No js alert -->
+  <p class="js-alert">
+    Merci <a href="http://enable-javascript.com/fr/">d'activer <strong>Javascript</strong></a> dans votre navigateur pour naviguer convenablement sur ce site.
+  </p>
+
+  <!-- Preloader screen -->
+  <div data-loader-window-load id="loader" class="at-view-fade-out">
+    <div class="row">
+      <div class="loader-inner line-scale-pulse-out">
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IE < 9 guard -->
+  <!--[if lt IE 9]>
+    <p class="browsehappy">Vous utilisez un navigateur <strong>obsol&egrave;te</strong>. Merci de le <a href="http://browsehappy.com/">mettre &agrave; jour</a> pour naviguer convenablement sur ce site.</p>
+  <![endif]-->
+
+  <!-- Off-canvas push menu -->
+  <!-- Hamburger toggle icon -->
+  <div>
+    <div id="menu">
+      <div class="row">
+        <div class="columns">
+          <span data-push-menu-button data-target-menu="#pushmenu" id="nav_list" class="hamburger transition">
+            <i class="fa fa-bars fa-fw"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Menu -->
+    <nav data-push-menu data-origin-button="#nav_list" id="pushmenu" class="pushmenu pushmenu-left">
+      <ul>
+        <li class="header">loganbraga.fr</li>
+        <li><a data-ng-class="{active: isCurrentView('/', true)}" href="#/">Accueil</a></li>
+        <li><a data-ng-class="{active: isCurrentView('/travaux')}" href="#/travaux">Travaux</a></li>
+        <li><a data-ng-class="{active: isCurrentView('/a-propos')}" href="#/a-propos">À Propos</a></li>
+        <li><a data-ng-class="{active: isCurrentView('/contact')}" href="#/contact">Contact</a></li>
+        <li class="header">M&eacute;dias</li>
+        <li><a target="_blank" data-ng-href="{{meta.blog}}"><i class="fa fa-pencil fa-fw"></i>&nbsp;Blog</a></li>
+        <li><a target="_blank" data-ng-href="{{meta.github}}"><i class="fa fa-github fa-fw"></i>&nbsp;Github</a></li>
+        <li><a target="_blank" data-ng-href="{{meta.linkedin}}"><i class="fa fa-linkedin fa-fw"></i>&nbsp;LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Dynamic view container -->
+  <div id="content" class="at-view-fade-in at-view-fade-out" data-ng-view>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="row">
+      <div class="columns medium-7">
+        <h4><a href="#/">Logan Braga</a></h4>
+        <p>&copy; Logan Braga {{meta.year}} - Tous droits r&eacute;serv&eacute;s</p>
+      </div>
+      <div class="columns medium-5 text-right icons">
+        <a target="_blank" title="Blog" data-ng-href="{{meta.blog}}"><i class="fa fa-fw fa-pencil fa-2x"></i></a>
+        <a target="_blank" title="Github" data-ng-href="{{meta.github}}"><i class="fa fa-fw fa-github fa-2x"></i></a>
+        <a target="_blank" title="LinkedIn" data-ng-href="{{meta.linkedin}}"><i class="fa fa-fw fa-linkedin fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src='https://maps.googleapis.com/maps/api/js?sensor=false&amp;language=fr'></script>
+
+  <!-- PRODUCTION SCRIPT -->
+  <!-- <script src='assets/js/prod_app.min.js'></script> -->
+  <!-- END PRODUCTION SCRIPT -->
+
+  <script src="bower_components/particles.js/particles.js"></script>
+  <script src="bower_components/foundation/js/vendor/fastclick.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+  <script>window.angular || document.write('<script src="bower_components/angular/angular.min.js">\x3C/script>')</script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="bower_components/lodash/lodash.min.js"></script>
+  <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+  <script src="app.js"></script>
+  <script src="components/base/loader.js"></script>
+  <script src="components/home/particles.js"></script>
+  <script src="components/base/pushMenu.js"></script>
+  <script src="components/work/workElement.js"></script>
+  <script src="components/base/base.js"></script>
+  <script src="components/home/home.js"></script>
+  <script src="components/work/work.js"></script>
+  <script src="components/about/about.js"></script>
+  <script src="components/contact/contact.js"></script>
+</body>
+</html>

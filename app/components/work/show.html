@@ -1,0 +1,51 @@
+<header id="home" class="secondary-header">
+  <div class="bg-wrapper"></div>
+  <div class="row">
+    <h1>
+      <strong>Travail</strong>
+      <span class="clearfix"></span>
+      {{work.title}}
+    </h1>
+  </div>
+</header>
+
+<section id="works" class="mono">
+  <div data-ng-show="workState.loading" data-show-error="workState.error" data-embed-loader></div>
+  <div data-ng-hide="workState.loading">
+    <div class="row work-detail-img">
+      <div class="columns medium-10 medium-offset-1 large-4 large-offset-4">
+        <a data-ng-href="{{work.website_url}}" target="_blank">
+          <img src="{{work.image_url}}" alt="{{work.title}}" />
+        </a>
+      </div>
+    </div>
+
+    <div class="row work-desc">
+      <div class="columns medium-10 medium-offset-1 large-8 large-offset-2">
+        <h5>{{work.title}}</h5>
+        <p class="info" data-ng-bind-html="work.description"></p>
+
+        <div class="links" data-ng-show="work.website_url || work.github_url">
+          <a data-ng-show="work.website_url" data-ng-href="{{work.website_url}}">Site web</a>
+          <a data-ng-show="work.github_url" data-ng-href="{{work.github_url}}">D&eacute;pôt Github</a>
+        </div>
+
+        <div data-ng-show="work.skills.length">
+          <hr>
+
+          <ul class="info-bloc skills-list">
+            <li class="skills" data-ng-repeat="skill in work.skills | limitTo: 10">
+              <span class="skill">{{skill}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row back">
+      <div class="columns medium-10 medium-offset-1 large-8 large-offset-2">
+        <a href="#/travaux"><i class="fa fa-fw fa-chevron-circle-left"></i>&nbsp;Retour</a>
+      </div>
+    </div>
+  </div>
+</section>

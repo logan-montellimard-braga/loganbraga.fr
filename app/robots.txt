@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /taichichuan
+Disallow: /taichichuan/*
+Sitemap: http://loganbraga.fr/sitemap.xml

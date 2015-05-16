@@ -1,0 +1,91 @@
+<header id="home">
+  <div data-particles class="bg-wrapper"></div>
+  <div class="row">
+    <h1>Logan<span class="hide-for-large-up clearfix"></span><strong>Braga</strong></h1>
+    <h5>D&eacute;veloppeur <span class="hide-for-large-up clearfix"></span> web et logiciel</h5>
+  </div>
+</header>
+
+<section id="works" data-ng-controller="WorksCtrl">
+  <div class="full-title full-width-row">
+    <div class="block-title">
+      <h3>Travaux<span class="show-for-small-only clearfix"></span><strong>Vedettes</strong></h3>
+    </div>
+  </div>
+
+  <div data-ng-show="work.loading" data-show-error="work.error" data-embed-loader></div>
+  <div data-ng-hide="work.loading">
+    <div data-work-element data-ng-repeat="work in works | filter:{featured:true} | limitTo: 3">
+    </div>
+  </div>
+
+  <div class="full-width-row more transition">
+    <a href="#/travaux"><i class="fa fa-fw fa-plus"></i>&nbsp;Tous les travaux</a>
+  </div>
+</section>
+
+<section id="about" class="filler" data-ng-controller="AboutCtrl">
+  <div class="full-width-row full-title-img">
+    <div class="wrapper"></div>
+    <h3>&agrave;<strong>propos</strong></h3>
+  </div>
+  <div class="row main-content">
+    <div class="row">
+      <div class="columns large-12">
+        <div class="columns medium-5 info-bloc">
+          <h4>Exp&eacute;rience</h4>
+          <div data-ng-show="exp.loading" data-show-error="exp.error" data-embed-loader></div>
+          <ul data-ng-hide="exp.loading">
+            <li data-ng-repeat="exp in experiences | limitTo: 3">
+              <strong>{{exp.duration}}</strong>
+              <br />
+              <span class="title">{{exp.title}}</span>
+              <br />
+              <span class="date-location">{{exp.description}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="columns medium-5 info-bloc">
+          <h4>Formation</h4>
+          <div data-ng-show="qualif.loading" data-show-error="qualif.error" data-embed-loader></div>
+          <ul data-ng-hide="qualif.loading">
+            <li data-ng-repeat="qualif in qualifications | limitTo: 3">
+              <span class="title">{{qualif.name}}</span>
+              <br />
+              <span class="date-location">{{qualif.date}}, {{qualif.location}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns large-12 infos">
+        <a href="#/a-propos"><i class="fa fa-fw fa-plus"></i>&nbsp;Plus d'infos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="filler" data-ng-controller="ContactCtrl">
+  <div class="full-title full-width-row">
+    <div class="block-title">
+      <h3>Me<span class="show-for-small-only clearfix"></span><strong>Contacter</strong></h3>
+    </div>
+  </div>
+  <div class="full-width-row">
+    <div class="columns large-6 contact-infos">
+      <div class="row">
+        <ul>
+          <li><i class="fa fa-fw fa-smile-o"></i>&nbsp;Logan Braga</li>
+          <li><i class="fa fa-fw fa-gift"></i>&nbsp;14 Mars 1996 ({{getAge('1996-03-14')}} ans)</li>
+          <li><i class="fa fa-fw fa-paper-plane-o"></i>&nbsp;<a data-ng-href="mailto:{{meta.mail}}">{{meta.mail}}</a></li>
+          <li><i class="fa fa-fw fa-map-marker"></i>&nbsp;Le Puy-en-Velay, 43000 France</li>
+        </ul>
+        <a class="button transition" href="#/contact">M'envoyer un message</a>
+      </div>
+    </div>
+    <div data-ui-gmap-google-map class="columns large-6" id="map" data-center='map.center' data-zoom='map.zoom' data-options='map.options'>
+      <div data-ui-gmap-marker data-idKey='1' data-coords='map.marker.cords' data-icon='map.marker.icon' data-options='map.marker.options'></div>
+    </div>
+  </div>
+</section>

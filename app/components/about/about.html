@@ -1,0 +1,87 @@
+<header id="home" class="secondary-header">
+  <div class="bg-wrapper"></div>
+  <div class="row">
+    <h1>À<span class="hide-for-large-up clearfix"></span><strong>Propos</strong></h1>
+  </div>
+</header>
+
+<section id="about" class="">
+  <div class="full-width-row full-title">
+    <h3>Mon<span class="hide-for-large-up clearfix"></span><strong>parcours</strong></h3>
+  </div>
+
+  <div class="row main-content">
+    <div class="row">
+      <div class="columns large-10 large-offset-1">
+        <div class="columns large-4 show-for-large-up">
+          <img class="photo" src="assets/img/tools.jpg" />
+        </div>
+        <div class="columns large-8 text-justify">
+          <p>
+            Auvergnat de {{getAge('1996-03-14')}} ans, j'&eacute;tude les m&eacute;tiers du web, du multim&eacute;dia
+            et du d&eacute;veloppement logiciel avec enthousiasme. Passion&eacute; par la r&eacute;solution de probl&egrave;mes modernes
+            et l'am&eacute;lioration de la vie quotidienne par les outils adapt&eacute;s, je crois en un web libre et aux communaut&eacute;s open-source, auxquelles je contribue.
+          </p>
+          <p>
+            Particuli&egrave;rement &agrave; l'aise sur les syst&egrave;mes GNU/Linux dans lesquels je suis baign&eacute; depuis longtemps, j'aime comprendre l'int&eacute;gralit&eacute; - ou du moins, essayer -
+            des couches avec lesquelles je travaille, et me forme donc, en parall&egrave;le, aux rudiments des disciplines avec lesquelles je suis amen&eacute; &agrave; travailler.
+          </p>
+          <p>
+            Apr&egrave;s un DUT M&eacute;tiers du Multim&eacute;dia et de l'Internet au Puy-en-Velay qui a catalys&eacute; ma motivation, je compte poursuivre 
+            ma formation en &eacute;cole d'ing&eacute;nieurs en informatique.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-width-row full-title">
+    <h3>Mes<span class="hide-for-large-up clearfix"></span><strong>qualifications</strong></h3>
+  </div>
+  <div class="row main-content">
+    <div class="row">
+      <div class="columns large-10 large-offset-1">
+        <div class="columns info-bloc">
+          <h4>Exp&eacute;rience</h4>
+          <div data-ng-show="exp.loading" data-show-error="exp.error" data-embed-loader></div>
+          <ul data-ng-hide="exp.loading">
+            <li data-ng-repeat="exp in experiences | limitTo: 20">
+              <strong>{{exp.duration}}</strong>
+              <br />
+              <span class="title">{{exp.title}}</span>
+              <br />
+              <span class="date-location">{{exp.description}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="columns info-bloc">
+          <h4>Formation</h4>
+          <div data-ng-show="qualif.loading" data-show-error="qualif.error" data-embed-loader></div>
+          <ul data-ng-hide="qualif.loading">
+            <li data-ng-repeat="qualif in qualifications | limitTo: 20">
+              <span class="title">{{qualif.name}}</span>
+              <br />
+              <span>{{qualif.options}}</span>
+              <br />
+              <span class="date-location">{{qualif.date}}, {{qualif.location}}</span>
+              <br />
+              <span class="date-location">{{qualif.honors}}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="columns info-bloc">
+          <h4>Comp&eacute;tences</h4>
+          <div data-ng-show="skill.loading" data-show-error="skill.error" data-embed-loader></div>
+          <ul data-ng-hide="skill.loading" class="at-view-fade-out">
+            <li class="skills" data-ng-repeat="skill in skills | limitTo: 20 | orderBy: 'name'">
+              <span class="skill">{{skill.name}}</span>
+            </li>
+            <li class="skills more">
+              <span class="more">...</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
