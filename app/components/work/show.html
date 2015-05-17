@@ -15,7 +15,7 @@
     <div class="row work-detail-img">
       <div class="columns medium-10 medium-offset-1 large-4 large-offset-4">
         <a data-ng-href="{{work.website_url}}" target="_blank">
-          <img src="{{work.image_url}}" alt="{{work.title}}" />
+          <img data-ng-src="assets/img/works/{{work.image_url}}" src="" alt="{{work.title}}" />
         </a>
       </div>
     </div>
@@ -34,8 +34,8 @@
           <hr>
 
           <ul class="info-bloc skills-list">
-            <li class="skills" data-ng-repeat="skill in work.skills | limitTo: 10">
-              <span class="skill">{{skill}}</span>
+            <li class="skills" data-ng-repeat="skill in work.skills | limitTo: 10 | orderBy: 'name'">
+              <span class="skill">{{skill.name}}</span>
             </li>
           </ul>
         </div>
@@ -44,7 +44,7 @@
 
     <div class="row back">
       <div class="columns medium-10 medium-offset-1 large-8 large-offset-2">
-        <a href="#/travaux"><i class="fa fa-fw fa-chevron-circle-left"></i>&nbsp;Retour</a>
+        <a href="#/travaux"><i class="fa fa-fw fa-chevron-circle-left"></i>&nbsp;Retour aux travaux</a>
       </div>
     </div>
   </div>
