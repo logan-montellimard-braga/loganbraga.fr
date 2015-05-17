@@ -9,31 +9,31 @@
   </div>
 </header>
 
-<section id="works" class="mono">
+<section id="works" class="mono" itemscope itemtype="http://schema.org/CreativeWork">
   <div data-ng-show="workState.loading" data-show-error="workState.error" data-embed-loader></div>
   <div data-ng-hide="workState.loading">
     <div class="row work-detail-img">
       <div class="columns medium-10 medium-offset-1 large-4 large-offset-4">
         <a data-ng-href="{{work.website_url}}" target="_blank">
-          <img data-ng-src="assets/img/works/{{work.image_url}}" src="" alt="{{work.title}}" />
+          <img itemprop="image" data-ng-src="assets/img/works/{{work.image_url}}" src="" alt="{{work.title}}" />
         </a>
       </div>
     </div>
 
     <div class="row work-desc">
       <div class="columns medium-10 medium-offset-1 large-8 large-offset-2">
-        <h5>{{work.title}}</h5>
-        <p class="info" data-ng-bind-html="work.description"></p>
+        <h5 itemprop="name">{{work.title}}</h5>
+        <p itemprop="text" class="info" data-ng-bind-html="work.description"></p>
 
         <div class="links" data-ng-show="work.website_url || work.github_url">
-          <a data-ng-show="work.website_url" data-ng-href="{{work.website_url}}">Site web</a>
-          <a data-ng-show="work.github_url" data-ng-href="{{work.github_url}}">D&eacute;pôt Github</a>
+          <a itemprop="url" data-ng-show="work.website_url" data-ng-href="{{work.website_url}}">Site web</a>
+          <a itemprop="sameAs" data-ng-show="work.github_url" data-ng-href="{{work.github_url}}">D&eacute;pôt Github</a>
         </div>
 
         <div data-ng-show="work.skills.length">
           <hr>
 
-          <ul class="info-bloc skills-list">
+          <ul itemprop="keywords" class="info-bloc skills-list">
             <li class="skills" data-ng-repeat="skill in work.skills | limitTo: 10 | orderBy: 'name'">
               <span class="skill">{{skill.name}}</span>
             </li>

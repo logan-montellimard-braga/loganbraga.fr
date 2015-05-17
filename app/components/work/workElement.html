@@ -1,16 +1,16 @@
-<div class="full-width-row work-row" data-ng-class="{'last': $last}">
+<div itemscope itemtype="http://schema.org/CreativeWork" class="full-width-row work-row" data-ng-class="{'last': $last}">
   <div class="work-desc columns medium-6" data-ng-class-odd="'medium-push-6'" data-ng-class-even="'even'">
     <div class="columns">
-      <h5><a class="transition" data-ng-href="#/travaux/{{work.id}}">{{work.title}}</a></h5>
-      <p>
+      <h5 itemprop="name"><a class="transition" data-ng-href="#/travaux/{{work.id}}">{{work.title}}</a></h5>
+      <p itemprop="description">
         {{work.summary}}
       </p>
     </div>
   </div>
   <a data-ng-href="#/travaux/{{work.id}}">
     <div data-ng-class-even="'even text-right'" data-ng-class-odd="'medium-pull-6'" class="work columns medium-6">
-      <div class="work-img" data-ng-style="{'background':'url(assets/img/works/' + work.thumbnail_url + ')'}"></div>
-      <div class="quotes">
+      <div itemprop="image" class="work-img" data-ng-style="{'background':'url(assets/img/works/' + work.thumbnail_url + ')'}"></div>
+      <div class="quotes" itemprop="citation">
         <div data-ng-repeat="quote in work.quotes">
           <p>{{quote}}</p>
           <br />

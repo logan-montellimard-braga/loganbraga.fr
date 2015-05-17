@@ -66,7 +66,7 @@
   </div>
 </section>
 
-<section id="contact" class="filler" data-ng-controller="ContactCtrl">
+<section id="contact" class="filler" data-ng-controller="ContactCtrl" itemscope itemtype="http://schema.org/Person">
   <div class="full-title full-width-row">
     <div class="block-title">
       <h3>Me<span class="show-for-small-only clearfix"></span><strong>Contacter</strong></h3>
@@ -76,10 +76,10 @@
     <div class="columns large-6 contact-infos">
       <div class="row">
         <ul>
-          <li><i class="fa fa-fw fa-smile-o"></i>&nbsp;Logan Braga</li>
-          <li><i class="fa fa-fw fa-gift"></i>&nbsp;14 Mars 1996 ({{getAge('1996-03-14')}} ans)</li>
-          <li><i class="fa fa-fw fa-paper-plane-o"></i>&nbsp;<a data-ng-href="mailto:{{meta.mail}}">{{meta.mail}}</a></li>
-          <li><i class="fa fa-fw fa-map-marker"></i>&nbsp;Le Puy-en-Velay, 43000 France</li>
+          <li itemprop="name"><i class="fa fa-fw fa-smile-o"></i>&nbsp;<span itemprop="givenName">Logan</span> <span itemprop="familyName">Braga</li>
+            <li><i class="fa fa-fw fa-gift"></i>&nbsp;<span itemprop="birthDate">14 Mars 1996</span> ({{getAge('1996-03-14')}} ans)</li>
+          <li><i class="fa fa-fw fa-paper-plane-o"></i>&nbsp;<a itemprop="mail" data-ng-href="mailto:{{meta.mail}}">{{meta.mail}}</a></li>
+          <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><i class="fa fa-fw fa-map-marker"></i>&nbsp;<span itemprop="addressLocality">Le Puy-en-Velay</span>, <span itemprop="postalCode">43000</span> <span itemprop="addressCountry">France</span></li>
         </ul>
         <a class="button transition" href="#/contact">M'envoyer un message</a>
       </div>
