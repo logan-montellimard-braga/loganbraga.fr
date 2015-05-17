@@ -15,7 +15,7 @@
 
   <div data-ng-show="work.loading" data-show-error="work.error" data-embed-loader></div>
   <div data-ng-hide="work.loading">
-    <div data-work-element data-ng-repeat="work in works | filter:{featured:true} | limitTo: 3">
+    <div data-work-element data-ng-repeat="work in works | filter:{featured:1} | limitTo: 3">
     </div>
   </div>
 
