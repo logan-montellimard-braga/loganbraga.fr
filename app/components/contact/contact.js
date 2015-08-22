@@ -5,10 +5,10 @@ angular.module('loganbraga.contact', [])
 .controller('ContactCtrl', ['$scope', '$http', 'API_URL', function($scope, $http, API_URL) {
   // Gmaps
   $scope.map = {
-    center: {latitude: 45.0442, longitude: 3.8858},
+    center: {latitude: 48.2973451, longitude: 4.0744009000000005},
     zoom: 6,
     marker: {
-      cords: {latitude: 45.0442, longitude: 3.8858},
+      cords: {latitude: 48.2973451, longitude: 4.0744009000000005},
       icon: 'assets/img/solid-pin-red.png',
       options: {
         icon: 'assets/img/solid-pin-red.png'
