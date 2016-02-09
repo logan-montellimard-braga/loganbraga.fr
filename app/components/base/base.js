@@ -6,7 +6,7 @@ angular.module('loganbraga.base', [])
   $scope.meta = {
     blog: "http://blog.loganbraga.fr",
     github: "https://github.com/loganbraga",
-    linkedin: "https://www.linkedin.com/pub/logan-braga/a3/503/314",
+    linkedin: "https://www.linkedin.com/in/loganbraga",
     mail: "contact@loganbraga.fr",
     year: new Date().getFullYear()
   };
