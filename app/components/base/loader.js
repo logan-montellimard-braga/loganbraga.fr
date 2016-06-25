@@ -7,8 +7,10 @@ angular.module('loganbraga')
     restrict: 'A',
     replace: false,
     link: function($scope, $element, $attr) {
+      document.body.style.overflowY = 'hidden';
       window.addEventListener('load', function() {
         $element.remove();
+        document.body.style.overflowY = 'scroll';
       });
     }
   }
