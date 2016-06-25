@@ -307,15 +307,16 @@ li.header {
   font-size: 1.8rem;
   position: fixed;
   text-align: right;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   margin-right: 2rem;
-  right: 0;
+  left: 0;
+  bottom: 20px;
   z-index: 99999;
 }
 
 .hamburger:hover, #nav_list.active i {
   cursor: pointer;
-  color: #B32128;
+  color: #353535;
 }
 
 .pushmenu {
@@ -815,6 +816,14 @@ li.header {
 
 #about {
   background: #fcfcfc;
+}
+
+#about .full-title {
+  background: #efefef;
+}
+
+#about .full-title h3 {
+  color: #666;
 }
 
 #about .main-content {
