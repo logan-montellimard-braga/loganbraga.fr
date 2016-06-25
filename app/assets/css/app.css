@@ -314,6 +314,10 @@ li.header {
   z-index: 99999;
 }
 
+#nav_list i {
+  text-shadow: 4px 4px rgba(20, 20, 20, 0.3);
+}
+
 .hamburger:hover, #nav_list.active i {
   cursor: pointer;
   color: #353535;
