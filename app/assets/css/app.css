@@ -813,7 +813,7 @@ li.header {
   padding: 110px 0;
   background: url('../img/tools.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 70%;
   text-align: center;
   position: relative;
 }
