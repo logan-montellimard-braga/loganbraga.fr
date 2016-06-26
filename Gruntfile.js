@@ -12,6 +12,8 @@ module.exports = function(grunt) {
         },
         src: [
           'app/bower_components/particles.js/particles.js',
+          'app/assets/js/vendor/hammer.min.js',
+          'app/assets/js/vendor/hammer-time.min.js',
           'app/bower_components/foundation/js/vendor/fastclick.js',
           'app/bower_components/angular/angular.js',
           'app/bower_components/angular-route/angular-route.js',
