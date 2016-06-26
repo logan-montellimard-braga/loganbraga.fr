@@ -24,7 +24,7 @@
               <p data-ng-show="!(contactForm.author.$pristine) && contactForm.author.$error.email"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir une adresse e-mail valide.</p>
             </div>
             <div class="small-3 large-2 columns">
-              <span class="prefix"><i class="fa fa-user fa-fw"></i>&nbsp;Nom</span>
+              <span class="prefix"><i class="fa fa-at fa-fw"></i>&nbsp;E-mail</span>
             </div>
             <div class="small-9 large-10 columns">
               <input data-ng-model="formData.author" required name="author" type="email" placeholder="Votre adresse e-mail...">
@@ -50,7 +50,7 @@
               <p data-ng-show="!(contactForm.content.$pristine) && contactForm.content.$error.maxlength"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir au plus 3&nbsp;000 caract&egrave;res.</p>
             </div>
             <div class="large-12 columns">
-              <label><i class="fa fa-comments fa-fw"></i>&nbsp;Corps du message</label>
+              <label><i class="fa fa-pencil fa-fw"></i>&nbsp;Corps du message</label>
               <textarea data-ng-model="formData.content" required name="content" maxlength="3000" minlength="15" rows="8" placeholder="Votre message..."></textarea>
             </div>
           </div>
