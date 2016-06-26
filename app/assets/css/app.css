@@ -318,9 +318,14 @@ li.header {
   text-shadow: 4px 4px rgba(20, 20, 20, 0.3);
 }
 
-.hamburger:hover, #nav_list.active i {
+.hamburger:hover, .hamburger:focus, #nav_list.active i {
   cursor: pointer;
-  color: #353535;
+  color: #282828;
+  text-shadow: 4px 4px transparent;
+}
+
+#nav_list.active i {
+  cursor: default;
 }
 
 .pushmenu {
@@ -359,7 +364,7 @@ li.header {
   border-bottom: none;
 }
 
-.pushmenu a:hover {
+.pushmenu a:hover, .pushmenu a:focus {
   color: #EDECEA;
   background: #303030;
 }
@@ -371,7 +376,7 @@ li.header {
 .pushmenu a.active:before {
   content: "» ";
 }
-.pushmenu a.active:hover {
+.pushmenu a.active:hover, .pushmenu a.active:focus {
   background: none;
   cursor: default;
 }
@@ -547,10 +552,10 @@ li.header {
 }
 
 @media (min-width: 40em) {
-  .work-desc h5 a:hover {
+  .work-desc h5 a:hover, .work-desc h5 a:focus {
     padding-left: 20px;
   }
-  .work-desc.even h5 a:hover {
+  .work-desc.even h5 a:hover, .work-desc.even h5 a:focus {
     padding-left: 0;
     padding-right: 20px;
   }
@@ -583,7 +588,7 @@ li.header {
   transition: 0.3s all ease;
   display: block;
 }
-.work-desc .links a:hover {
+.work-desc .links a:hover, .work-desc .links a:focus {
   padding-left: 10px;
 }
 
@@ -624,7 +629,7 @@ li.header {
   transition: all 0.3s ease;
 }
 
-.work:hover {
+.work:hover, .work:focus {
   cursor: pointer;
 }
 
@@ -646,7 +651,7 @@ li.header {
   margin-left: 0;
 }
 
-.work:hover .quotes {
+.work:hover .quotes, .work:focus .quotes {
   top: 200px;
   opacity: 0;
 }
@@ -659,7 +664,7 @@ li.header {
     margin-right: 20px;
     margin-left: 0;
   }
-  .work:hover .quotes {
+  .work:hover .quotes, .work:focus .quotes {
     top: 90px;
   }
   .work-desc {
@@ -722,7 +727,7 @@ li.header {
   right: 0;
 }
 
-.work:hover .hover {
+.work:hover .hover, .work:focus .hover {
   opacity: 1;
 }
 
@@ -733,12 +738,12 @@ li.header {
   transition: 0.3s all ease;
 }
 
-.work:hover .hover img {
+.work:hover .hover img, .work:focus .hover img {
   opacity: 0.9;
   top: 0px;
 }
 
-.work:hover .work-img {
+.work:hover .work-img, .work:focus .work-img {
   /* -webkit-filter: grayscale(100%); */
   /* filter: grayscale(100%); */
   /* filter: gray; */
@@ -778,7 +783,7 @@ li.header {
   text-transform: uppercase;
   transition: 0.3s all ease;
 }
-.back a:hover {
+.back a:hover, .back a:focus {
   padding-left: 10px;
 }
 
@@ -800,7 +805,7 @@ li.header {
   height: 100%;
 }
 
-.more:hover {
+.more:hover, .more:focus {
   background: #282830;
 }
 
@@ -862,7 +867,7 @@ li.header {
   font-size: 0.9em;
   letter-spacing: 0.1rem;
 }
-#about .infos a:hover {
+#about .infos a:hover, #about .infos a:focus {
   color: #B32128;
 }
 
@@ -890,6 +895,16 @@ li.header {
   font-variant: small-caps;
 }
 
+#about li.skills a {
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition: border 0.1s ease-in;
+}
+
+#about li.skills a:hover, #about li.skills a:focus {
+  border-bottom: 2px solid white;
+}
+
 .info-bloc li strong {
   font-size: 0.75em;
   font-weight: 600;
@@ -907,7 +922,7 @@ li.header {
 .skills.more {
   background: #1E1E24!important;
 }
-.skills .more:hover {
+.skills .more:hover, .skills .more:focus {
   background: none;
 }
 
@@ -998,6 +1013,16 @@ li.header {
   color: #C8242C!important;
 }
 
+#works .info-bloc .skills a {
+  color: #C8242C;
+  border-bottom: 2px solid transparent;
+  transition: border 0.1s ease-in;
+}
+
+#works .info-bloc .skills a:hover, #works .info-block .skills a:focus {
+  border-bottom: 2px solid #C8242C;
+}
+
 #contact .contact-form button {
   box-shadow: 10px 10px 0px rgba(30, 30, 36, 0.15);
   background: #1E1E24;
@@ -1039,7 +1064,7 @@ li.header {
   border: none;
 }
 
-.contact-form label:hover {
+.contact-form label:hover, .contact-form label:focus {
   cursor: default;
 }
 
@@ -1085,7 +1110,7 @@ li.header {
 .contact-infos a {
   color: #EDECEA;
 }
-.contact-infos a:hover {
+.contact-infos a:hover, .contact-infos a:focus {
   color: white;
 }
 .contact-infos .button {
@@ -1099,7 +1124,7 @@ li.header {
   font-weight: 600;
   box-shadow: 10px 10px 0px rgba(30, 30, 36, 0.15);
 }
-.contact-infos .button:hover {
+.contact-infos .button:hover, .contact-infos .button:focus {
   background: #C8242C;
   color: white;
   border: 1px solid white;
@@ -1169,7 +1194,7 @@ footer h4, footer a {
   letter-spacing: 0.25rem;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
   color: #57575e;
 }
 
@@ -1191,7 +1216,7 @@ footer .icons i {
   transition: text-shadow 0.2s ease-in;
 }
 
-footer a:hover i{
+footer a:hover i, footer a:focus i {
   color: #57575e;
   text-shadow: 4px 4px rgba(10, 10, 10, 0.4);
 }
