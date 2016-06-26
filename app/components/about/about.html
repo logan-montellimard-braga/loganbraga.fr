@@ -27,8 +27,8 @@
             des couches avec lesquelles je travaille, et me forme donc, en parall&egrave;le, aux rudiments des disciplines avec lesquelles je suis amen&eacute; &agrave; travailler.
           </p>
           <p>
-            Apr&egrave;s un DUT M&eacute;tiers du Multim&eacute;dia et de l'Internet au Puy-en-Velay qui a catalys&eacute; ma motivation, je compte poursuivre 
-            ma formation en &eacute;cole d'ing&eacute;nieurs en informatique.
+            Apr&egrave;s un DUT M&eacute;tiers du Multim&eacute;dia et de l'Internet au Puy-en-Velay qui a catalys&eacute; ma motivation, je poursuis
+            ma formation en &eacute;cole d'ing&eacute;nieurs en informatique et syst&egrave;mes d'information.
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@
           <div data-ng-show="skill.loading" data-show-error="skill.error" data-embed-loader></div>
           <ul data-ng-hide="skill.loading" class="at-view-fade-out">
             <li class="skills" data-ng-repeat="skill in skills | limitTo: 20 | orderBy: 'name'">
-              <span class="skill">{{skill.name}}</span>
+              <span class="skill"><a href="#/techniques/{{ skill.id }}">{{skill.name}}</a></span>
             </li>
             <li class="skills more">
               <span class="more">...</span>

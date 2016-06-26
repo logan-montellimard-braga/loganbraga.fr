@@ -1,17 +1,17 @@
 'use strict';
 
+function treatWorks(data) {
+  _.map(data, function(o) {
+    o.quotes = o.quote.split('\\n');
+  });
+  return data;
+}
+
 angular.module('loganbraga.work', [])
 
 .controller('WorksCtrl', ['$scope', '$http', 'API_URL', function($scope, $http, API_URL) {
 
   $scope.work = {loading: true, error: false};
-
-  function treatWorks(data) {
-    _.map(data, function(o) {
-      o.quotes = o.quote.split('\\n');
-    });
-    return data;
-  }
 
   $http.get(API_URL + '/works', {cache: true})
   .success(function(data) {
@@ -29,6 +29,23 @@ angular.module('loganbraga.work', [])
       $scope.work.error = true;
     });
   });
+}])
+
+.controller('WorksSkillCtrl', ['$routeParams', '$scope', '$http', 'API_URL', function($routeParams, $scope, $http, API_URL) {
+  $scope.work = {loading: true, error: false};
+  $scope.technique = "";
+  var id = $routeParams.id;
+
+  $http.get(API_URL + '/skills/' + id, {cache: true})
+    .success(function(data) {
+      $scope.technique = data.name;
+      $scope.works = treatWorks(data.works);
+      $scope.work.loading = false;
+    })
+    .error(function() {
+      $scope.works = {};
+      $scope.work.error = true;
+    });
 }])
 
 .controller('WorkCtrl', ['$sce', '$cacheFactory','$routeParams', '$scope', '$http', 'API_URL', function($sce, $cacheFactory, $routeParams, $scope, $http, API_URL) {

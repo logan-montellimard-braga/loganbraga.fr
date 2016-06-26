@@ -34,8 +34,8 @@
           <hr>
 
           <ul itemprop="keywords" class="info-bloc skills-list">
-            <li class="skills" data-ng-repeat="skill in work.skills | limitTo: 10 | orderBy: 'name'">
-              <span class="skill">{{skill.name}}</span>
+            <li class="skills" data-ng-repeat="skill in work.skills | limitTo: 15 | orderBy: 'name'">
+              <span class="skill"><a itemprop="url" href="#/techniques/{{ skill.id }}">{{skill.name}}</a></span>
             </li>
           </ul>
         </div>

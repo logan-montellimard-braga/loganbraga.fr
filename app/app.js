@@ -41,6 +41,11 @@ angular.module('loganbraga',
     controller: 'WorkCtrl',
     title: 'Travaux'
   })
+  .when('/techniques/:id', {
+    templateUrl: 'components/work/works_skill.html',
+    controller: 'WorksSkillCtrl',
+    title: 'Travaux'
+  })
   .otherwise({
     templateUrl: 'components/base/404.html',
     title: 'Erreur'

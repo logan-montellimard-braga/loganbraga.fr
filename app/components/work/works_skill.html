@@ -1,0 +1,40 @@
+<header id="home" class="secondary-header">
+  <div class="bg-wrapper"></div>
+  <div class="row">
+    <h1>Technique '<strong>{{ technique }}</strong>'</h1>
+  </div>
+</header>
+
+<section id="works">
+
+  <div class="row back contact-form">
+    <div class="columns medium-8 medium-offset-2">
+      <p>
+        <a href="#/travaux"><i class="fa fa-fw fa-chevron-circle-left"></i>&nbsp;Retour aux travaux</a>
+      </p>
+      <form role="search">
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span class="prefix"><i class="fa fa-search fa-fw"></i></span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input data-ng-model="searchQuery" type="text" placeholder="Chercher...">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div data-ng-show="work.loading" data-show-error="work.error" data-embed-loader></div>
+  <div data-ng-show="!(work.loading) && !(works.length)" class="row">
+    <div class="columns medium-8 medium-offset-2">
+      <p>
+        Il n'y a pas encore de travaux &eacute;tiquett&eacute;s avec la comp&eacute;tence {{ technique }}.
+      </p>
+    </div>
+  </div>
+  <div data-ng-hide="work.loading">
+    <div data-work-element data-ng-repeat="work in works | filter: searchQuery | orderBy: ['created_at', 'modified_at', 'id'] : true | limitTo: 20">
+    </div>
+  </div>
+</section>
