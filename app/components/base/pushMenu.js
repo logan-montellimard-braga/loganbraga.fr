@@ -29,6 +29,7 @@ angular.module('loganbraga')
 
             var tag = e.target.tagName.toLowerCase();
             if (['input', 'textarea'].indexOf(tag) > -1) return true;
+            if (e.ctrlKey || e.shiftKey || e.altKey) return true;
 
             var menu = angular.element(document.querySelectorAll($attr.targetMenu));
             switch (e.keyCode) {
