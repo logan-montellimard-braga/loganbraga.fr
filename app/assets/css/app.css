@@ -460,7 +460,7 @@ li.header {
 }
 .error a {
   font-weight: 800;
-  color: #EDECEA;
+  color: #333;
 }
 .error p {
   font-size: 1.15em;
@@ -1008,8 +1008,8 @@ li.header {
   border: none;
 }
 
-#contact .contact-form button:not(.disabled):focus,
-#contact .contact-form button:not(.disabled):hover {
+#contact .contact-form button:not(:disabled):focus,
+#contact .contact-form button:not(:disabled):hover {
   color: #1E1E24;
   background: #EDECEA;
   border: none;
@@ -1132,6 +1132,20 @@ li.header {
   height: 275px;
 }
 
+.validation-errors {
+  text-align: left;
+  clear: both;
+}
+
+.validation-errors p {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  background: white;
+  color: #C8242C;
+  padding: 8px;
+  font-weight: 600;
+  box-shadow: 10px 10px 0px rgba(30, 30, 36, 0.15);
+}
 
 /***************
  * FOOTER

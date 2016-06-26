@@ -15,34 +15,48 @@
   <div class="row contact-form">
     <div class="columns large-10 large-offset-1">
       <p class="alert success" data-ng-show="okay">Message envoy&eacute; avec succ&egrave;s !</p>
-      <p class="alert error" data-ng-show="error">Erreur lors de l'envoi du message, merci de remplir tous les champs.</p>
-      <form data-ng-class="{'send': okay}" data-ng-submit="sendMessage()">
+      <p class="alert error" data-ng-show="error">Une erreur est survenue, merci de tenter &agrave; nouveau dans quelques instants, ou d'utiliser directement l'adresse <a href="mailto:contact@loganbraga.fr">contact@loganbraga.fr</a>.</p>
+      <form data-ng-class="{'send': okay}" data-ng-submit="sendMessage()" name="contactForm">
         <fieldset data-ng-disabled="isSending">
           <div class="row collapse">
+            <div class="validation-errors">
+              <p data-ng-show="!(contactForm.author.$pristine) && contactForm.author.$error.required"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Ce champ est requis.</p>
+              <p data-ng-show="!(contactForm.author.$pristine) && contactForm.author.$error.email"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir une adresse e-mail valide.</p>
+            </div>
             <div class="small-3 large-2 columns">
               <span class="prefix"><i class="fa fa-user fa-fw"></i>&nbsp;Nom</span>
             </div>
             <div class="small-9 large-10 columns">
-              <input data-ng-model="formData.author" required name="author" maxlength="255" type="text" placeholder="Votre nom ou e-mail...">
+              <input data-ng-model="formData.author" required name="author" type="email" placeholder="Votre adresse e-mail...">
             </div>
           </div>
           <div class="row collapse">
+            <div class="validation-errors">
+              <p data-ng-show="!(contactForm.title.$pristine) && contactForm.title.$error.required"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Ce champ est requis.</p>
+              <p data-ng-show="!(contactForm.title.$pristine) && contactForm.title.$error.minlength"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir au moins 3 caract&egrave;res.</p>
+              <p data-ng-show="!(contactForm.title.$pristine) && contactForm.title.$error.maxlength"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir au plus 255 caract&egrave;res.</p>
+            </div>
             <div class="small-3 large-2 columns">
               <span class="prefix"><i class="fa fa-tag fa-fw"></i>&nbsp;Sujet</span>
             </div>
             <div class="small-9 large-10 columns">
-              <input data-ng-model="formData.title" required name="title" maxlength="255" type="text" placeholder="Sujet du message...">
+              <input data-ng-model="formData.title" required name="title" maxlength="255" minlength="3" type="text" placeholder="Sujet du message...">
             </div>
           </div>
           <div class="row collapse">
+            <div class="validation-errors">
+              <p data-ng-show="!(contactForm.content.$pristine) && contactForm.content.$error.required"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Ce champ est requis.</p>
+              <p data-ng-show="!(contactForm.content.$pristine) && contactForm.content.$error.minlength"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir au moins 15 caract&egrave;res.</p>
+              <p data-ng-show="!(contactForm.content.$pristine) && contactForm.content.$error.maxlength"><i class="fa fa-fw fa-exclamation-circle"></i>&nbsp;Veuillez fournir au plus 3&nbsp;000 caract&egrave;res.</p>
+            </div>
             <div class="large-12 columns">
               <label><i class="fa fa-comments fa-fw"></i>&nbsp;Corps du message</label>
-              <textarea data-ng-model="formData.content" required name="content" maxlength="3000" rows="8" placeholder="Votre message..."></textarea>
+              <textarea data-ng-model="formData.content" required name="content" maxlength="3000" minlength="15" rows="8" placeholder="Votre message..."></textarea>
             </div>
           </div>
           <div class="row text-right">
             <div class="large-12 columns">
-              <button data-ng-disabled="isSending" id="send_mess" type="submit" class="button large transition">
+              <button data-ng-disabled="isSending || contactForm.$invalid" id="send_mess" type="submit" class="button large transition">
                 <i class="fa fa-paper-plane"></i>
                 &nbsp;
                 Envoyer
