@@ -451,7 +451,7 @@ li.header {
 
 
 .error {
-  padding: 50px 0;
+  /* padding: 50px 0; */
   text-align: center;
   color: #EDECEA;
   font-variant: small-caps;
@@ -1173,10 +1173,13 @@ footer .icons {
 footer .icons i {
   font-size: 1.5em;
   margin-left: 10px;
+  text-shadow: 0px 0px transparent;
+  transition: text-shadow 0.2s ease-in;
 }
 
 footer a:hover i{
   color: #57575e;
+  text-shadow: 4px 4px rgba(10, 10, 10, 0.4);
 }
 
 @media (max-width: 40em) {
