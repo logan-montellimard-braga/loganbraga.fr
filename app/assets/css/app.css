@@ -85,7 +85,7 @@ li {
   font-weight: 600;
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 1.2em;
-  background: #EDECEA;
+  background: white;
 }
 
 .alert.success {
@@ -452,11 +452,11 @@ li.header {
 
 .error {
   /* padding: 50px 0; */
-  text-align: center;
+  text-align: left;
   color: #EDECEA;
   font-variant: small-caps;
   text-transform: lowercase;
-  font-weight: 600px;
+  font-weight: 600;
 }
 .error a {
   font-weight: 800;
