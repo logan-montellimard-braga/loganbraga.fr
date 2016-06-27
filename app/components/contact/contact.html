@@ -27,7 +27,7 @@
               <span class="prefix"><i class="fa fa-at fa-fw"></i>&nbsp;E-mail</span>
             </div>
             <div class="small-9 large-10 columns">
-              <input data-ng-model="formData.author" required name="author" type="email" placeholder="Votre adresse e-mail...">
+              <input data-ng-model-options="{ updateOn: 'blur' }" data-ng-model="formData.author" required name="author" type="email" placeholder="Votre adresse e-mail...">
             </div>
           </div>
           <div class="row collapse">
@@ -40,7 +40,7 @@
               <span class="prefix"><i class="fa fa-tag fa-fw"></i>&nbsp;Sujet</span>
             </div>
             <div class="small-9 large-10 columns">
-              <input data-ng-model="formData.title" required name="title" maxlength="255" minlength="3" type="text" placeholder="Sujet du message...">
+              <input data-ng-model-options="{ updateOn: 'blur' }" data-ng-model="formData.title" required name="title" maxlength="255" minlength="3" type="text" placeholder="Sujet du message...">
             </div>
           </div>
           <div class="row collapse">
@@ -51,7 +51,7 @@
             </div>
             <div class="large-12 columns">
               <label><i class="fa fa-pencil fa-fw"></i>&nbsp;Corps du message</label>
-              <textarea data-ng-model="formData.content" required name="content" maxlength="3000" minlength="15" rows="8" placeholder="Votre message..."></textarea>
+              <textarea data-ng-model-options="{ updateOn: 'blur' }" data-ng-model="formData.content" required name="content" maxlength="3000" minlength="15" rows="8" placeholder="Votre message..."></textarea>
             </div>
           </div>
           <div class="row text-right">
