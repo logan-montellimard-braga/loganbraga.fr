@@ -770,6 +770,13 @@ li.header {
   }
 }
 
+.work-title-bloc p.work-dir-link {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .work-dir-link a {
   color: white;
   font-size: 1.4rem;
