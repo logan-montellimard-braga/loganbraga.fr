@@ -770,6 +770,24 @@ li.header {
   }
 }
 
+.work-dir-link a {
+  color: white;
+  font-size: 1.4rem;
+  transition: color 0.2s ease-in;
+}
+
+.work-dir-link a:hover, .work-dir-link a:focus {
+  color: #cfcfcf;
+}
+
+.work-title-bloc h5 {
+  display: inline-block;
+}
+
+.work-title-bloc p {
+  display: inline-block;
+}
+
 .back {
   padding: 0 0 30px 0;
 }

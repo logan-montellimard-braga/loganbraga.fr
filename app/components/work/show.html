@@ -12,17 +12,17 @@
 <section id="works" class="mono" itemscope itemtype="http://schema.org/CreativeWork">
   <div data-ng-show="workState.loading" data-show-error="workState.error" data-embed-loader></div>
   <div data-ng-hide="workState.loading">
-    <div class="row work-detail-img">
-      <div class="columns medium-10 medium-offset-1 large-4 large-offset-4">
-        <a data-ng-href="{{work.website_url}}" target="_blank">
-          <img itemprop="image" data-ng-src="assets/img/works/{{work.image_url}}" src="" alt="{{work.title}}" />
-        </a>
-      </div>
-    </div>
-
     <div class="row work-desc">
-      <div class="columns medium-10 medium-offset-1 large-8 large-offset-2">
-        <h5 itemprop="name">{{work.title}}</h5>
+      <div class="columns medium-10 large-8 large-offset-2 medium-offset-1">
+        <div class="work-title-bloc">
+          <p class="text-left work-dir-link">
+            <a title="Travail précédent" data-ng-if="work.prev_id" href="#/travaux/{{work.prev_id}}"><i class="fa fa-fw fa-angle-left"></i></a>
+          </p>
+          <h5 itemprop="name">{{work.title}}</h5>
+          <p class="text-right work-dir-link">
+            <a title="Travail suivant" data-ng-if="work.next_id" href="#/travaux/{{work.next_id}}"><i class="fa fa-fw fa-angle-right"></i></a>
+          </p>
+        </div>
         <p itemprop="text" class="info" data-ng-bind-html="work.description"></p>
 
         <div class="links" data-ng-show="work.website_url || work.github_url">
