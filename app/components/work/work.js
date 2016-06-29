@@ -31,13 +31,17 @@ angular.module('loganbraga.work', [])
   });
 }])
 
-.controller('WorksSkillCtrl', ['$routeParams', '$scope', '$http', 'API_URL', function($routeParams, $scope, $http, API_URL) {
+.controller('WorksSkillCtrl', ['$location', '$routeParams', '$scope', '$http', 'API_URL', function($location, $routeParams, $scope, $http, API_URL) {
   $scope.work = {loading: true, error: false};
   $scope.technique = "";
   var id = $routeParams.id;
 
   $http.get(API_URL + '/skills/' + id, {cache: true})
     .success(function(data) {
+      if (data === false) {
+        $location.path('/404');
+        return;
+      }
       $scope.technique = data.name;
       $scope.works = treatWorks(data.works);
       $scope.work.loading = false;
@@ -48,7 +52,7 @@ angular.module('loganbraga.work', [])
     });
 }])
 
-.controller('WorkCtrl', ['$sce', '$cacheFactory','$routeParams', '$scope', '$http', 'API_URL', function($sce, $cacheFactory, $routeParams, $scope, $http, API_URL) {
+.controller('WorkCtrl', ['$location', '$sce', '$cacheFactory','$routeParams', '$scope', '$http', 'API_URL', function($location, $sce, $cacheFactory, $routeParams, $scope, $http, API_URL) {
   $scope.workState = {loading: true, error: false};
   var id = $routeParams.id;
   var httpCache = $cacheFactory.get('$http');
@@ -68,6 +72,10 @@ angular.module('loganbraga.work', [])
   if ($scope.work == undefined) {
     $http.get(API_URL + '/works/' + id, {cache: true})
     .success(function(data) {
+      if (data === false) {
+        $location.path('/404');
+        return;
+      }
       $scope.work = data;
       $scope.work.description = $sce.trustAsHtml($scope.work.description);
       $scope.workState.loading = false;
