@@ -104,6 +104,70 @@ li {
   font-family: "FontAwesome";
 }
 
+
+#messages {
+  font-size: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+  z-index: 9999;
+}
+
+.message {
+  background: #333;
+  box-shadow: 10px 10px 0px rgba(30, 30, 36, 0.3);
+  padding: 20px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.message hr {
+  border-color: #444;
+}
+
+.message:hover {
+  opacity: 1;
+}
+
+.message .action-links {
+  text-align: right;
+}
+
+.message p, .message a, .message h6 {
+  color: white;
+}
+
+.message h6 {
+  font-weight: bold;
+}
+
+.message p {
+  text-transform: none;
+}
+
+.message .action-links a {
+  font-size: 0.9rem;
+}
+
+.message a.validate {
+  font-weight: 600;
+  margin-right: 15px;
+  transition: border 0.2s ease-in;
+  border-bottom: 1px solid transparent;
+}
+
+.message a.cancel {
+  color: #888;
+}
+
+.message a.validate:hover, .message a.validate:focus {
+  border-bottom: 1px solid white;
+}
+
+.message.close {
+}
+
+
 h1, h5 {
   color: #EDECEA;
   text-transform: uppercase;
@@ -185,6 +249,23 @@ h5 {
 
 .at-view-fade-out.ng-leave-active {
   opacity: 0;
+}
+
+.fade.ng-hide {
+    opacity: 0;
+}
+
+.fade.ng-hide-remove,
+.fade.ng-hide-add {
+  display: block !important;
+}
+
+.fade.ng-hide-remove {
+    transition: all linear 200ms;
+}
+
+.fade.ng-hide-add {
+    transition: all linear 200ms;
 }
 
 

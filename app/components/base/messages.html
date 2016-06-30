@@ -1,0 +1,13 @@
+<div id="messages" class="row show-for-medium-up fade" data-ng-show="pastHeader">
+  <div class="column message alert fade" data-ng-repeat="alert in alerts | limitTo: 1">
+    <h6>{{alert.title}}</h6>
+    <p>
+      {{alert.text}}
+    </p>
+    <hr>
+    <div class="action-links">
+      <a class="validate" data-identifier="{{alert.id}}" href="{{alert.action_link}}" title="{{alert.action_text}}">{{alert.action_text}}</a>
+        <a class="cancel" data-identifier="{{alert.id}}">Fermer</a>
+    </div>
+  </div>
+</div>

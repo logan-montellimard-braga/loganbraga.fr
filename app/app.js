@@ -4,6 +4,7 @@ angular.module('loganbraga',
                [
                  'ngRoute',
                  'ngAnimate',
+                 'LocalStorageModule',
                  'loganbraga.base',
                  'loganbraga.home',
                  'loganbraga.about',
@@ -14,7 +15,12 @@ angular.module('loganbraga',
 
 .constant('API_URL', 'http://api.loganbraga.fr')
 
-.config(['$routeProvider', function($routeProvider) {
+.config(['$routeProvider', 'localStorageServiceProvider', function($routeProvider, localStorageServiceProvider) {
+  localStorageServiceProvider
+    .setPrefix('loganbraga')
+    .setStorageType('localStorage')
+    .setNotify(true, true);
+
   $routeProvider
   .when('/', {
     templateUrl: 'components/home/home.html',

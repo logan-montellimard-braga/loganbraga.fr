@@ -18,6 +18,7 @@ module.exports = function(grunt) {
           'app/bower_components/angular/angular.js',
           'app/bower_components/angular-route/angular-route.js',
           'app/bower_components/angular-animate/angular-animate.js',
+          'app/bower_components/angular-local-storage/dist/angular-local-storage.js',
           'app/bower_components/lodash/lodash.js',
           'app/bower_components/angular-google-maps/dist/angular-google-maps.js',
           'app/app.js',
