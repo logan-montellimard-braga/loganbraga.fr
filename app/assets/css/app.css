@@ -34,6 +34,14 @@ html, body {
   }
 }
 
+@media (max-width: 40.0625em) {
+  .show-for-medium-up {
+    display: none!important;
+    visibility: hidden!important;
+    opacity: 0!important;
+  }
+}
+
 body {
   font-family: "Open Sans", "Helvetica", sans-serif;
   margin: 0;
