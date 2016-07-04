@@ -461,9 +461,7 @@ li.header {
 .pushmenu a.active {
   color: #EDECEA;
   font-weight: 900;
-}
-.pushmenu a.active:before {
-  content: "» ";
+  border-right: 3px solid #EDECEA;
 }
 .pushmenu a.active:hover, .pushmenu a.active:focus {
   background: none;
@@ -762,23 +760,12 @@ li.header {
   }
 }
 
-.work .quotes div:first-child p:before {
-  content:"« ";
-  font-weight: 600;
-  opacity: 0.9;
-}
-.work .quotes div:last-child p:after {
-  content:" »";
-  font-weight: 600;
-  opacity: 0.9;
-}
-
 .work .quotes p {
   margin: 2px 0;
   font-size: 0.8em;
   display: inline-block;
-  color: #EDECEA;
-  background: #1E1E24;
+  color: #1E1E24;
+  background: white;
   padding: 4px 8px;
   font-weight: 400;
   text-transform: uppercase;
@@ -817,6 +804,15 @@ li.header {
 }
 
 .work:hover .hover, .work:focus .hover {
+  opacity: 1;
+}
+
+.work .hover h5 {
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+
+.work:hover .hover h5 {
   opacity: 1;
 }
 
