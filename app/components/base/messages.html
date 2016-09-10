@@ -1,6 +1,7 @@
 <div id="messages" class="row show-for-medium-up fade" data-ng-show="pastHeader">
   <div class="column message alert fade" data-ng-repeat="alert in alerts | limitTo: 1">
     <h6>{{alert.title}}</h6>
+    <a data-identifier="{{alert.id}}" class="close">&times;</a>
     <p>
       {{alert.text}}
     </p>

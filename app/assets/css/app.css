@@ -122,19 +122,20 @@ li {
 }
 
 .message {
-  background: #333;
-  box-shadow: 10px 10px 0px rgba(30, 30, 36, 0.3);
+  background: #efefef;
+  box-shadow: 10px 10px 0px rgba(30, 30, 36, 0.15);
+  border: 1px solid rgba(30, 30, 36, 0.10);
   padding: 20px;
-  opacity: 0.75;
+  /* opacity: 0.75; */
   transition: opacity 0.2s ease-in-out;
 }
 
 .message hr {
-  border-color: #444;
+  /* border-color: #444; */
 }
 
 .message:hover {
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .message .action-links {
@@ -142,15 +143,11 @@ li {
 }
 
 .message p, .message a, .message h6 {
-  color: white;
+  color: #333;
 }
 
 .message h6 {
   font-weight: bold;
-}
-
-.message p {
-  text-transform: none;
 }
 
 .message .action-links a {
@@ -161,18 +158,38 @@ li {
   font-weight: 600;
   margin-right: 15px;
   transition: border 0.2s ease-in;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.message a.validate:hover, .message a.validate:focus {
+  border-bottom: 2px solid #C8242C;
 }
 
 .message a.cancel {
   color: #888;
+  transition: border 0.2s ease-in;
+  border-bottom: 2px solid transparent;
+}
+.message a.cancel:hover, .message a.cancel:hover {
+  border-bottom: 2px solid #888;
 }
 
-.message a.validate:hover, .message a.validate:focus {
-  border-bottom: 1px solid white;
+.message .close {
+  color: #888;
+  font-size: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 15px;
+  transition: color 0.2s ease-in;
+  font-weight: bold;
 }
 
-.message.close {
+.message .close:hover {
+  cursor: pointer;
+}
+.message .close:hover, .message .close:focus {
+  color: #c8242c;
 }
 
 
